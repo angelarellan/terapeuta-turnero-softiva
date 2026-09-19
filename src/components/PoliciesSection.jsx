@@ -52,7 +52,7 @@ export default function PoliciesSection() {
     <section id="politicas" className="scroll-mt-24 px-4 py-10 sm:px-6">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto mb-8 max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-bold text-plum sm:text-4xl">
+          <h2 className="font-serif text-3xl font-bold text-ink sm:text-4xl">
             Políticas de Turno
           </h2>
           <p className="mt-2 text-base text-muted sm:text-lg">
@@ -65,16 +65,16 @@ export default function PoliciesSection() {
           {POLICIES.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="flex items-start gap-4 rounded-3xl border border-nude/70 bg-white/55 p-6 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md"
+              className="flex items-start gap-4 rounded-3xl border border-beige/70 bg-white/55 p-6 shadow-xl shadow-sage-deep/10 backdrop-blur-md"
             >
               <span
                 aria-hidden="true"
-                className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-nude/50 text-rose-gold-deep"
+                className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-beige/50 text-sage-deep"
               >
                 <Icon size={20} />
               </span>
               <div>
-                <p className="font-serif text-lg font-semibold text-plum">{title}</p>
+                <p className="font-serif text-lg font-semibold text-ink">{title}</p>
                 <p className="mt-1.5 text-base text-muted">{text}</p>
               </div>
             </div>

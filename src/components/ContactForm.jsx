@@ -22,13 +22,13 @@ export default function ContactForm({
     <div className="flex flex-col gap-4">
       <label className="flex flex-col gap-1.5">
         <span className="text-xs font-medium uppercase tracking-wide text-muted">
-          Nombre y apellido <span className="text-rose-gold-deep">*</span>
+          Nombre y apellido <span className="text-sage-deep">*</span>
         </span>
         <div
           className={`flex items-center gap-2 rounded-xl border px-3.5 py-2.5 transition ${
             showNameError
               ? 'border-red-400 bg-red-50'
-              : 'border-nude bg-white/70 focus-within:border-rose-gold-deep'
+              : 'border-beige bg-white/70 focus-within:border-sage-deep'
           }`}
         >
           <User
@@ -47,7 +47,7 @@ export default function ContactForm({
             onChange={(event) => onChangeName(event.target.value)}
             onBlur={() => setNameTouched(true)}
             placeholder="Ej: Juana Pérez"
-            className="w-full bg-transparent text-sm text-plum placeholder:text-muted/50 focus:outline-none"
+            className="w-full bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
           />
         </div>
         {showNameError && (
@@ -60,13 +60,13 @@ export default function ContactForm({
 
       <label className="flex flex-col gap-1.5">
         <span className="text-xs font-medium uppercase tracking-wide text-muted">
-          WhatsApp <span className="text-rose-gold-deep">*</span>
+          WhatsApp <span className="text-sage-deep">*</span>
         </span>
         <div
           className={`flex items-center gap-2 rounded-xl border px-3.5 py-2.5 transition ${
             showPhoneError
               ? 'border-red-400 bg-red-50'
-              : 'border-nude bg-white/70 focus-within:border-rose-gold-deep'
+              : 'border-beige bg-white/70 focus-within:border-sage-deep'
           }`}
         >
           <Phone
@@ -86,7 +86,7 @@ export default function ContactForm({
             onChange={(event) => onChangePhone(event.target.value)}
             onBlur={() => setPhoneTouched(true)}
             placeholder="Ej: 351 123 4567"
-            className="w-full bg-transparent text-sm text-plum placeholder:text-muted/50 focus:outline-none"
+            className="w-full bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
           />
         </div>
         {showPhoneError && (
@@ -101,20 +101,20 @@ export default function ContactForm({
         <span className="text-xs font-medium uppercase tracking-wide text-muted">
           Notas técnicas (opcional)
         </span>
-        <div className="flex items-start gap-2 rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 transition focus-within:border-rose-gold-deep">
+        <div className="flex items-start gap-2 rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 transition focus-within:border-sage-deep">
           <NotebookPen size={16} className="mt-0.5 flex-shrink-0 text-muted/60" aria-hidden="true" />
           <textarea
             rows={2}
             value={notes}
             onChange={(event) => onChangeNotes(event.target.value)}
             placeholder="Ej: curvatura CC 0.15mm, alergias, diseño de cejas deseado..."
-            className="w-full resize-none bg-transparent text-sm text-plum placeholder:text-muted/50 focus:outline-none"
+            className="w-full resize-none bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
           />
         </div>
       </label>
 
       <p className="text-xs text-muted">
-        <span className="text-rose-gold-deep">*</span> Campos obligatorios. Te
+        <span className="text-sage-deep">*</span> Campos obligatorios. Te
         enviaremos la confirmación de tu turno por WhatsApp a este número.
       </p>
 

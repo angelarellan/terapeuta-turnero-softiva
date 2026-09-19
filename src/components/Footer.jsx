@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-nude/60 bg-cashmere px-4 py-8 text-center sm:px-6">
+    <footer className="border-t border-beige/60 bg-cream px-4 py-8 text-center sm:px-6">
       <img
         src="/logo.jpg"
         alt=""
@@ -8,7 +8,7 @@ export default function Footer() {
         width={56}
         height={56}
         loading="lazy"
-        className="mx-auto mb-3 h-14 w-14 rounded-full object-cover shadow-sm shadow-rose-gold-deep/20"
+        className="mx-auto mb-3 h-14 w-14 rounded-full object-cover shadow-sm shadow-sage-deep/20"
       />
       <p className="text-sm text-muted">
         Desarrollado por{' '}
@@ -16,7 +16,7 @@ export default function Footer() {
           href="https://www.softivastudio.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-rose-gold-deep transition hover:text-champagne"
+          className="font-medium text-sage-deep transition hover:text-gold"
         >
           Softiva Studio
         </a>

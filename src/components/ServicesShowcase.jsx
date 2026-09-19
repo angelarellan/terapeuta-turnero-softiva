@@ -6,7 +6,7 @@ export default function ServicesShowcase({ services, onSelectService }) {
     <section id="servicios" className="scroll-mt-24 px-4 py-10 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto mb-8 max-w-xl text-center">
-          <h2 className="font-serif text-3xl font-bold text-plum sm:text-4xl">
+          <h2 className="font-serif text-3xl font-bold text-ink sm:text-4xl">
             Nuestros Servicios
           </h2>
           <p className="mt-2 text-base text-muted sm:text-lg">
@@ -20,7 +20,7 @@ export default function ServicesShowcase({ services, onSelectService }) {
             return (
               <div
                 key={service.id}
-                className="group flex w-full flex-col items-start gap-3 rounded-3xl border border-nude/70 bg-white/55 p-5 text-left shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]"
+                className="group flex w-full flex-col items-start gap-3 rounded-3xl border border-beige/70 bg-white/55 p-5 text-left shadow-xl shadow-sage-deep/10 backdrop-blur-md sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]"
               >
                 <div className="aspect-video w-full overflow-hidden rounded-2xl">
                   <img
@@ -37,32 +37,32 @@ export default function ServicesShowcase({ services, onSelectService }) {
                 <div className="flex w-full items-center justify-between">
                   <span
                     aria-hidden="true"
-                    className="flex h-12 w-12 items-center justify-center rounded-xl bg-nude/50 text-rose-gold-deep"
+                    className="flex h-12 w-12 items-center justify-center rounded-xl bg-beige/50 text-sage-deep"
                   >
                     <Icon size={22} />
                   </span>
-                  <span className="rounded-full bg-plum/5 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-plum/70">
+                  <span className="rounded-full bg-ink/5 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-ink/70">
                     {service.badge}
                   </span>
                 </div>
                 <div>
-                  <p className="font-serif text-lg font-semibold text-plum">
+                  <p className="font-serif text-lg font-semibold text-ink">
                     {service.name}
                   </p>
                   <p className="mt-1 text-sm text-muted">{service.description}</p>
                 </div>
-                <div className="mt-auto flex w-full flex-col gap-1.5 border-t border-nude/70 pt-3">
-                  <span className="text-2xl font-bold tracking-tight text-plum">
+                <div className="mt-auto flex w-full flex-col gap-1.5 border-t border-beige/70 pt-3">
+                  <span className="text-2xl font-bold tracking-tight text-ink">
                     {formatPrice(service.price)}
                   </span>
-                  <span className="inline-flex w-fit whitespace-nowrap rounded-full bg-nude/40 px-2.5 py-1 text-xs font-medium text-plum/70">
+                  <span className="inline-flex w-fit whitespace-nowrap rounded-full bg-beige/40 px-2.5 py-1 text-xs font-medium text-ink/70">
                     {formatDuration(service.duration)}
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={() => onSelectService(service.id)}
-                  className="mt-1 flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2.5 text-base font-semibold text-obsidian transition hover:brightness-105"
+                  className="mt-1 flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2.5 text-base font-semibold text-charcoal transition hover:brightness-105"
                 >
                   Reservar este servicio
                   <ArrowRight size={15} aria-hidden="true" />

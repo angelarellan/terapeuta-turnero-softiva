@@ -32,7 +32,7 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
   return (
     <div className="mt-8">
       <div className="mb-4">
-        <h2 className="font-serif text-lg font-semibold text-plum">
+        <h2 className="font-serif text-lg font-semibold text-ink">
           Vacaciones y Días Bloqueados
         </h2>
         <p className="mt-1 text-sm text-muted">
@@ -44,7 +44,7 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
       <div className="grid gap-4 sm:grid-cols-2">
         <form
           onSubmit={handleAddSingle}
-          className="flex flex-col gap-3 rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-lg shadow-rose-gold-deep/10 backdrop-blur-md"
+          className="flex flex-col gap-3 rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-lg shadow-sage-deep/10 backdrop-blur-md"
         >
           <span className="text-xs font-medium uppercase tracking-wide text-muted">
             Bloquear un día puntual
@@ -56,11 +56,11 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
               value={singleDate}
               onChange={(event) => setSingleDate(event.target.value)}
               required
-              className="rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum focus:border-rose-gold-deep focus:outline-none"
+              className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink focus:border-sage-deep focus:outline-none"
             />
             <button
               type="submit"
-              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-105"
+              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2 text-sm font-semibold text-charcoal transition hover:brightness-105"
             >
               <Plus size={15} aria-hidden="true" />
               Bloquear
@@ -70,7 +70,7 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
 
         <form
           onSubmit={handleAddRange}
-          className="flex flex-col gap-3 rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-lg shadow-rose-gold-deep/10 backdrop-blur-md"
+          className="flex flex-col gap-3 rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-lg shadow-sage-deep/10 backdrop-blur-md"
         >
           <span className="text-xs font-medium uppercase tracking-wide text-muted">
             Bloquear un rango (ej. vacaciones)
@@ -83,7 +83,7 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
               onChange={(event) => setRangeFrom(event.target.value)}
               required
               aria-label="Desde"
-              className="rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum focus:border-rose-gold-deep focus:outline-none"
+              className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink focus:border-sage-deep focus:outline-none"
             />
             <span className="text-sm text-muted">a</span>
             <input
@@ -93,11 +93,11 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
               onChange={(event) => setRangeTo(event.target.value)}
               required
               aria-label="Hasta"
-              className="rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum focus:border-rose-gold-deep focus:outline-none"
+              className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink focus:border-sage-deep focus:outline-none"
             />
             <button
               type="submit"
-              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-105"
+              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2 text-sm font-semibold text-charcoal transition hover:brightness-105"
             >
               <Plus size={15} aria-hidden="true" />
               Bloquear rango
@@ -108,23 +108,23 @@ export default function BlockedDatesManager({ blockedDates, onAddDates, onRemove
 
       <div className="mt-4 flex flex-col gap-3">
         {groups.length === 0 && (
-          <p className="rounded-3xl border border-nude/70 bg-white/55 p-4 text-sm text-muted">
+          <p className="rounded-3xl border border-beige/70 bg-white/55 p-4 text-sm text-muted">
             No hay días bloqueados. El calendario público está totalmente disponible.
           </p>
         )}
         {groups.map((group) => (
           <div
             key={group.from}
-            className="flex flex-col gap-2 rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-lg shadow-rose-gold-deep/10 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between"
+            className="flex flex-col gap-2 rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-lg shadow-sage-deep/10 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between"
           >
             <div className="flex items-center gap-3">
               <span
                 aria-hidden="true"
-                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-nude/50 text-rose-gold-deep"
+                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-beige/50 text-sage-deep"
               >
                 <CalendarOff size={16} />
               </span>
-              <p className="text-sm font-medium capitalize text-plum">
+              <p className="text-sm font-medium capitalize text-ink">
                 {group.from === group.to
                   ? formatDateLong(group.from)
                   : `${formatDateLong(group.from)} — ${formatDateLong(group.to)}`}

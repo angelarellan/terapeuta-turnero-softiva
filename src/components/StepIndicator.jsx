@@ -22,17 +22,17 @@ export default function StepIndicator({ steps, currentStep }) {
               <span
                 className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-semibold transition ${
                   isDone
-                    ? 'bg-gradient-to-br from-rose-gold to-champagne text-obsidian'
+                    ? 'bg-gradient-to-br from-sage to-gold text-charcoal'
                     : isActive
-                      ? 'border-2 border-rose-gold-deep text-rose-gold-deep'
-                      : 'border border-nude text-plum/70'
+                      ? 'border-2 border-sage-deep text-sage-deep'
+                      : 'border border-beige text-ink/70'
                 }`}
               >
                 {isDone ? <Check size={15} /> : stepNumber}
               </span>
               <span
                 className={`hidden text-[11px] sm:block ${
-                  isActive ? 'text-plum' : 'text-muted'
+                  isActive ? 'text-ink' : 'text-muted'
                 }`}
               >
                 {label}
@@ -41,7 +41,7 @@ export default function StepIndicator({ steps, currentStep }) {
             {stepNumber !== steps.length && (
               <span
                 className={`mx-2 h-px flex-1 ${
-                  isDone ? 'bg-gradient-to-r from-rose-gold to-champagne' : 'bg-nude/60'
+                  isDone ? 'bg-gradient-to-r from-sage to-gold' : 'bg-beige/60'
                 }`}
               />
             )}

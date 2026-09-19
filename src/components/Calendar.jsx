@@ -37,25 +37,25 @@ export default function Calendar({ selectedDate, onSelectDate, blockedDates = []
   const todayIso = `${todayYear}-${String(todayMonth).padStart(2, '0')}-${String(todayDay).padStart(2, '0')}`
 
   return (
-    <div className="w-full rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md xl:max-w-xs">
+    <div className="w-full rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-xl shadow-sage-deep/10 backdrop-blur-md xl:max-w-xs">
       <div className="flex items-center justify-between">
         <button
           type="button"
           onClick={goToPrevMonth}
           disabled={isAtCurrentMonth}
           aria-label="Mes anterior"
-          className="flex h-8 w-8 items-center justify-center rounded-full text-plum/70 transition hover:bg-nude/40 hover:text-plum disabled:pointer-events-none disabled:opacity-0"
+          className="flex h-8 w-8 items-center justify-center rounded-full text-ink/70 transition hover:bg-beige/40 hover:text-ink disabled:pointer-events-none disabled:opacity-0"
         >
           <ChevronLeft size={16} aria-hidden="true" />
         </button>
-        <p aria-live="polite" className="text-sm font-semibold capitalize text-plum">
+        <p aria-live="polite" className="text-sm font-semibold capitalize text-ink">
           {getMonthLabel(viewYear, viewMonth)}
         </p>
         <button
           type="button"
           onClick={goToNextMonth}
           aria-label="Mes siguiente"
-          className="flex h-8 w-8 items-center justify-center rounded-full text-plum/70 transition hover:bg-nude/40 hover:text-plum"
+          className="flex h-8 w-8 items-center justify-center rounded-full text-ink/70 transition hover:bg-beige/40 hover:text-ink"
         >
           <ChevronRight size={16} aria-hidden="true" />
         </button>
@@ -92,12 +92,12 @@ export default function Calendar({ selectedDate, onSelectDate, blockedDates = []
               }
               className={`aspect-square rounded-lg text-sm font-medium transition ${
                 isSelected
-                  ? 'bg-gradient-to-br from-rose-gold to-champagne text-obsidian'
+                  ? 'bg-gradient-to-br from-sage to-gold text-charcoal'
                   : isBlocked
-                    ? 'cursor-not-allowed text-plum/20 line-through'
+                    ? 'cursor-not-allowed text-ink/20 line-through'
                     : isPast
-                      ? 'cursor-not-allowed text-plum/20'
-                      : `text-plum/75 hover:bg-nude/40 ${isToday ? 'ring-1 ring-inset ring-rose-gold-deep/50' : ''}`
+                      ? 'cursor-not-allowed text-ink/20'
+                      : `text-ink/75 hover:bg-beige/40 ${isToday ? 'ring-1 ring-inset ring-sage-deep/50' : ''}`
               }`}
             >
               {cell.day}

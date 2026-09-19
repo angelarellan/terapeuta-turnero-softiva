@@ -21,7 +21,7 @@ export default function SuccessScreen({ booking, onReset }) {
         <CheckCircle2 size={34} />
       </span>
       <div>
-        <h2 className="font-serif text-2xl font-bold text-plum">
+        <h2 className="font-serif text-2xl font-bold text-ink">
           ¡Reserva confirmada, {clientName.split(' ')[0]}!
         </h2>
         <p className="mt-2 text-sm text-muted">
@@ -30,32 +30,32 @@ export default function SuccessScreen({ booking, onReset }) {
         </p>
       </div>
 
-      <div className="w-full rounded-3xl border border-nude/70 bg-white/60 p-5 text-left text-sm text-plum/80 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md">
-        <div className="flex justify-between border-b border-nude/70 pb-2.5">
+      <div className="w-full rounded-3xl border border-beige/70 bg-white/60 p-5 text-left text-sm text-ink/80 shadow-xl shadow-sage-deep/10 backdrop-blur-md">
+        <div className="flex justify-between border-b border-beige/70 pb-2.5">
           <span className="text-muted">Servicio</span>
-          <span className="font-medium text-plum">
+          <span className="font-medium text-ink">
             {service.name} · {formatPrice(service.price)}
           </span>
         </div>
-        <div className="flex justify-between border-b border-nude/70 py-2.5">
+        <div className="flex justify-between border-b border-beige/70 py-2.5">
           <span className="text-muted">Especialista</span>
-          <span className="font-medium text-plum">{barber.name}</span>
+          <span className="font-medium text-ink">{barber.name}</span>
         </div>
-        <div className="flex justify-between border-b border-nude/70 py-2.5">
+        <div className="flex justify-between border-b border-beige/70 py-2.5">
           <span className="text-muted">Fecha</span>
-          <span className="font-medium capitalize text-plum">
+          <span className="font-medium capitalize text-ink">
             {formatDateLong(date)}
           </span>
         </div>
-        <div className="flex justify-between border-b border-nude/70 py-2.5">
+        <div className="flex justify-between border-b border-beige/70 py-2.5">
           <span className="text-muted">Horario</span>
-          <span className="font-medium text-plum">
+          <span className="font-medium text-ink">
             {time} a {minutesToTime(timeToMinutes(time) + service.duration)} hs
           </span>
         </div>
         <div className="flex justify-between pt-2.5">
           <span className="text-muted">Seña abonada (Mercado Pago)</span>
-          <span className="font-medium text-rose-gold-deep">
+          <span className="font-medium text-sage-deep">
             {formatPrice(service.deposit)}
           </span>
         </div>
@@ -66,7 +66,7 @@ export default function SuccessScreen({ booking, onReset }) {
           href={ownerWhatsAppUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full max-w-xs items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-5 py-2.5 text-sm font-semibold text-obsidian shadow-md shadow-rose-gold-deep/20 transition hover:brightness-105"
+          className="flex w-full max-w-xs items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-5 py-2.5 text-sm font-semibold text-charcoal shadow-md shadow-sage-deep/20 transition hover:brightness-105"
         >
           <MessageCircle size={16} aria-hidden="true" />
           Enviar comprobante y notificar a Vicky
@@ -80,7 +80,7 @@ export default function SuccessScreen({ booking, onReset }) {
       <button
         type="button"
         onClick={onReset}
-        className="flex items-center gap-2 rounded-full border border-nude px-5 py-2.5 text-sm font-medium text-plum/80 transition hover:border-rose-gold-deep hover:text-plum"
+        className="flex items-center gap-2 rounded-full border border-beige px-5 py-2.5 text-sm font-medium text-ink/80 transition hover:border-sage-deep hover:text-ink"
       >
         <RotateCcw size={15} aria-hidden="true" />
         Agendar otro turno

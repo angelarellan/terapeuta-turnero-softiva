@@ -103,14 +103,14 @@ export default function AppointmentsTable({
         onClick={() => scrollByAmount(-1)}
         disabled={!canScrollLeft}
         aria-label="Ver columnas anteriores"
-        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-nude/70 bg-white/60 text-plum/60 transition hover:border-rose-gold-deep/60 hover:text-plum disabled:pointer-events-none disabled:opacity-0"
+        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-beige/70 bg-white/60 text-ink/60 transition hover:border-sage-deep/60 hover:text-ink disabled:pointer-events-none disabled:opacity-0"
       >
         <ChevronLeft size={16} aria-hidden="true" />
       </button>
-      <div ref={scrollRef} className="overflow-x-auto rounded-2xl border border-nude/70">
+      <div ref={scrollRef} className="overflow-x-auto rounded-2xl border border-beige/70">
         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
           <thead>
-            <tr className="bg-nude/25 text-xs uppercase tracking-wide text-muted">
+            <tr className="bg-beige/25 text-xs uppercase tracking-wide text-muted">
               {showDateColumn && <th className="px-4 py-3 font-medium">Fecha</th>}
               <th className="px-4 py-3 font-medium">Hora</th>
               <th className="px-4 py-3 font-medium">Cliente</th>
@@ -139,18 +139,18 @@ export default function AppointmentsTable({
               return (
                 <Fragment key={appointment.id}>
                   <tr
-                    className={`border-t border-nude/50 text-plum/80 ${isCancelled ? 'line-through decoration-plum/30' : ''}`}
+                    className={`border-t border-beige/50 text-ink/80 ${isCancelled ? 'line-through decoration-ink/30' : ''}`}
                   >
                     {showDateColumn && (
-                      <td className="whitespace-nowrap px-4 py-3 text-plum/70">
+                      <td className="whitespace-nowrap px-4 py-3 text-ink/70">
                         {formatDateShort(appointment.date)}
                       </td>
                     )}
-                    <td className="px-4 py-3 font-semibold text-plum">
+                    <td className="px-4 py-3 font-semibold text-ink">
                       {appointment.time}
                     </td>
                     <td className="px-4 py-3">
-                      <div className="font-medium text-plum">
+                      <div className="font-medium text-ink">
                         {appointment.clientName}
                       </div>
                       <div className="text-xs text-muted">{appointment.clientPhone}</div>
@@ -158,7 +158,7 @@ export default function AppointmentsTable({
                     <td className="px-4 py-3">
                       <span className="flex items-center gap-1.5">
                         {service?.icon && (
-                          <service.icon size={12} className="text-rose-gold-deep" aria-hidden="true" />
+                          <service.icon size={12} className="text-sage-deep" aria-hidden="true" />
                         )}
                         {service?.name}
                       </span>
@@ -198,7 +198,7 @@ export default function AppointmentsTable({
                             rel="noopener noreferrer"
                             onClick={() => onSendReminder(appointment.id)}
                             aria-label={`Enviar recordatorio de WhatsApp a ${appointment.clientName}`}
-                            className="flex items-center gap-1.5 rounded-full border border-rose-gold-deep/30 bg-rose-gold/10 px-3 py-1.5 text-xs font-medium text-rose-gold-deep transition hover:bg-rose-gold/20"
+                            className="flex items-center gap-1.5 rounded-full border border-sage-deep/30 bg-sage/10 px-3 py-1.5 text-xs font-medium text-sage-deep transition hover:bg-sage/20"
                           >
                             <Send size={12} aria-hidden="true" />
                             Enviar por WhatsApp
@@ -215,8 +215,8 @@ export default function AppointmentsTable({
                           aria-label={`Ver notas técnicas de ${appointment.clientName}`}
                           className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition ${
                             hasNotes
-                              ? 'border-champagne/60 bg-champagne/10 text-plum'
-                              : 'border-nude bg-white/60 text-muted hover:border-rose-gold-deep/40'
+                              ? 'border-gold/60 bg-gold/10 text-ink'
+                              : 'border-beige bg-white/60 text-muted hover:border-sage-deep/40'
                           }`}
                         >
                           <NotebookPen size={12} aria-hidden="true" />
@@ -248,7 +248,7 @@ export default function AppointmentsTable({
                     </td>
                   </tr>
                   {notesOpen && (
-                    <tr className="border-t border-nude/50 bg-nude/10">
+                    <tr className="border-t border-beige/50 bg-beige/10">
                       <td colSpan={columnCount} className="px-4 py-3">
                         <label className="flex flex-col gap-1.5">
                           <span className="text-xs font-medium uppercase tracking-wide text-muted">
@@ -258,7 +258,7 @@ export default function AppointmentsTable({
                             rows={2}
                             value={draftNotes}
                             onChange={(event) => setDraftNotes(event.target.value)}
-                            className="w-full resize-none rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum placeholder:text-muted/50 focus:border-rose-gold-deep focus:outline-none"
+                            className="w-full resize-none rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/50 focus:border-sage-deep focus:outline-none"
                             placeholder="Ej: curvatura CC, 0.15mm, sin alergias conocidas."
                           />
                         </label>
@@ -266,14 +266,14 @@ export default function AppointmentsTable({
                           <button
                             type="button"
                             onClick={() => setOpenNotesId(null)}
-                            className="rounded-full px-3.5 py-1.5 text-xs font-medium text-muted transition hover:text-plum"
+                            className="rounded-full px-3.5 py-1.5 text-xs font-medium text-muted transition hover:text-ink"
                           >
                             Cancelar
                           </button>
                           <button
                             type="button"
                             onClick={() => handleSaveNotes(appointment.id)}
-                            className="rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-1.5 text-xs font-semibold text-obsidian transition hover:brightness-105"
+                            className="rounded-full bg-gradient-to-r from-sage to-gold px-4 py-1.5 text-xs font-semibold text-charcoal transition hover:brightness-105"
                           >
                             Guardar notas
                           </button>
@@ -292,7 +292,7 @@ export default function AppointmentsTable({
         onClick={() => scrollByAmount(1)}
         disabled={!canScrollRight}
         aria-label="Ver columnas siguientes"
-        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-nude/70 bg-white/60 text-plum/60 transition hover:border-rose-gold-deep/60 hover:text-plum disabled:pointer-events-none disabled:opacity-0"
+        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-beige/70 bg-white/60 text-ink/60 transition hover:border-sage-deep/60 hover:text-ink disabled:pointer-events-none disabled:opacity-0"
       >
         <ChevronRight size={16} aria-hidden="true" />
       </button>

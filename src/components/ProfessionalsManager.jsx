@@ -53,7 +53,7 @@ export default function ProfessionalsManager({
     <div className="mt-8">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 className="font-serif text-lg font-semibold text-plum">Especialistas</h2>
+          <h2 className="font-serif text-lg font-semibold text-ink">Especialistas</h2>
           <p className="mt-1 text-sm text-muted">
             Agregá, dá de baja o marcá vacaciones para el equipo.
           </p>
@@ -61,7 +61,7 @@ export default function ProfessionalsManager({
         <button
           type="button"
           onClick={() => setShowForm((s) => !s)}
-          className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-105"
+          className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2 text-sm font-semibold text-charcoal transition hover:brightness-105"
         >
           <UserPlus size={15} aria-hidden="true" />
           Agregar especialista
@@ -71,15 +71,15 @@ export default function ProfessionalsManager({
       {showForm && (
         <form
           onSubmit={handleSubmit}
-          className="mb-4 flex flex-col gap-3 rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-lg shadow-rose-gold-deep/10 backdrop-blur-md"
+          className="mb-4 flex flex-col gap-3 rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-lg shadow-sage-deep/10 backdrop-blur-md"
         >
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-plum">Nuevo especialista</span>
+            <span className="text-sm font-semibold text-ink">Nuevo especialista</span>
             <button
               type="button"
               onClick={handleCloseForm}
               aria-label="Cerrar formulario de nuevo especialista"
-              className="flex h-7 w-7 items-center justify-center rounded-full text-muted transition hover:bg-nude/40 hover:text-plum"
+              className="flex h-7 w-7 items-center justify-center rounded-full text-muted transition hover:bg-beige/40 hover:text-ink"
             >
               <X size={16} aria-hidden="true" />
             </button>
@@ -95,7 +95,7 @@ export default function ProfessionalsManager({
                 value={name}
                 onChange={(event) => setName(event.target.value)}
                 placeholder="Ej: Ana Pérez"
-                className="rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum placeholder:text-muted/50 focus:border-rose-gold-deep focus:outline-none"
+                className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/50 focus:border-sage-deep focus:outline-none"
               />
             </label>
             <label className="flex flex-1 flex-col gap-1.5">
@@ -108,12 +108,12 @@ export default function ProfessionalsManager({
                 value={role}
                 onChange={(event) => setRole(event.target.value)}
                 placeholder="Ej: Microblading"
-                className="rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum placeholder:text-muted/50 focus:border-rose-gold-deep focus:outline-none"
+                className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/50 focus:border-sage-deep focus:outline-none"
               />
             </label>
             <button
               type="submit"
-              className="rounded-full bg-gradient-to-r from-rose-gold to-champagne px-5 py-2.5 text-sm font-semibold text-obsidian transition hover:brightness-105"
+              className="rounded-full bg-gradient-to-r from-sage to-gold px-5 py-2.5 text-sm font-semibold text-charcoal transition hover:brightness-105"
             >
               Agregar
             </button>
@@ -123,7 +123,7 @@ export default function ProfessionalsManager({
 
       <div className="flex flex-col gap-3">
         {professionals.length === 0 && (
-          <p className="rounded-3xl border border-nude/70 bg-white/55 p-4 text-sm text-muted">
+          <p className="rounded-3xl border border-beige/70 bg-white/55 p-4 text-sm text-muted">
             No hay especialistas cargadas.
           </p>
         )}
@@ -132,17 +132,17 @@ export default function ProfessionalsManager({
           return (
             <div
               key={professional.id}
-              className="flex flex-col gap-3 rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-lg shadow-rose-gold-deep/10 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between"
+              className="flex flex-col gap-3 rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-lg shadow-sage-deep/10 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between"
             >
               <div className="flex items-center gap-3">
                 <span
                   aria-hidden="true"
-                  className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-nude/50 text-sm font-semibold text-plum/70"
+                  className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-beige/50 text-sm font-semibold text-ink/70"
                 >
                   {initials(professional.name)}
                 </span>
                 <div>
-                  <p className="font-medium text-plum">{professional.name}</p>
+                  <p className="font-medium text-ink">{professional.name}</p>
                   <p className="text-xs text-muted">{professional.role}</p>
                 </div>
                 <span

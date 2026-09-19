@@ -38,7 +38,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
   }
 
   return (
-    <header className="sticky top-0 z-40 bg-obsidian/95 text-cashmere shadow-lg shadow-obsidian/20 backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-charcoal/95 text-cream shadow-lg shadow-charcoal/20 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <button
           type="button"
@@ -62,7 +62,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
               key={link.hash}
               type="button"
               onClick={() => handleLinkClick(link.hash)}
-              className="rounded-full px-3.5 py-1.5 text-sm font-medium text-cashmere/70 transition hover:bg-white/10 hover:text-champagne"
+              className="rounded-full px-3.5 py-1.5 text-sm font-medium text-cream/70 transition hover:bg-white/10 hover:text-gold"
             >
               {link.label}
             </button>
@@ -75,7 +75,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
               <button
                 type="button"
                 onClick={handleGoHome}
-                className="flex items-center gap-1.5 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-cashmere/85 transition hover:bg-white/10"
+                className="flex items-center gap-1.5 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-cream/85 transition hover:bg-white/10"
               >
                 <CalendarClock size={15} aria-hidden="true" />
                 Volver al sitio
@@ -83,7 +83,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
               <button
                 type="button"
                 onClick={handleLogout}
-                className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-105"
+                className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2 text-sm font-semibold text-charcoal transition hover:brightness-105"
               >
                 <LogOut size={15} aria-hidden="true" />
                 Cerrar sesión
@@ -93,7 +93,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
             <button
               type="button"
               onClick={handleGoToAdmin}
-              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-105"
+              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2 text-sm font-semibold text-charcoal transition hover:brightness-105"
             >
               <ShieldCheck size={15} aria-hidden="true" />
               Panel Admin
@@ -106,7 +106,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
           onClick={() => setMobileOpen((o) => !o)}
           aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={mobileOpen}
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-cashmere transition hover:bg-white/10 md:hidden"
+          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-cream transition hover:bg-white/10 md:hidden"
         >
           {mobileOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
         </button>
@@ -120,7 +120,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
                 key={link.hash}
                 type="button"
                 onClick={() => handleLinkClick(link.hash)}
-                className="rounded-lg px-3 py-2.5 text-left text-sm font-medium text-cashmere/80 transition hover:bg-white/10"
+                className="rounded-lg px-3 py-2.5 text-left text-sm font-medium text-cream/80 transition hover:bg-white/10"
               >
                 {link.label}
               </button>
@@ -130,7 +130,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
                 <button
                   type="button"
                   onClick={handleGoHome}
-                  className="mt-1 flex items-center gap-1.5 rounded-lg border border-white/20 px-3 py-2.5 text-sm font-medium text-cashmere/85"
+                  className="mt-1 flex items-center gap-1.5 rounded-lg border border-white/20 px-3 py-2.5 text-sm font-medium text-cream/85"
                 >
                   <CalendarClock size={15} aria-hidden="true" />
                   Volver al sitio
@@ -138,7 +138,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
                 <button
                   type="button"
                   onClick={handleLogout}
-                  className="flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-rose-gold to-champagne px-3 py-2.5 text-sm font-semibold text-obsidian"
+                  className="flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-sage to-gold px-3 py-2.5 text-sm font-semibold text-charcoal"
                 >
                   <LogOut size={15} aria-hidden="true" />
                   Cerrar sesión
@@ -148,7 +148,7 @@ export default function NavBar({ isAuthenticated, onNavigate, onGoHome, onLogout
               <button
                 type="button"
                 onClick={handleGoToAdmin}
-                className="mt-1 flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-rose-gold to-champagne px-3 py-2.5 text-sm font-semibold text-obsidian"
+                className="mt-1 flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-sage to-gold px-3 py-2.5 text-sm font-semibold text-charcoal"
               >
                 <ShieldCheck size={15} aria-hidden="true" />
                 Panel Admin

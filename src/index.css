@@ -12,17 +12,17 @@
   --font-serif: "Playfair Display", "Plus Jakarta Sans Variable", system-ui,
     serif;
 
-  /* Beauty Premium 3D — paleta cálida de estudio de belleza */
-  --color-cashmere: #faf8f5;
-  --color-cashmere-soft: #f4ede8;
-  --color-rose-gold: #e8b4b8;
-  --color-rose-gold-deep: #a8415b;
-  --color-champagne: #d4af37;
-  --color-champagne-soft: #e9cf7d;
-  --color-nude: #e2c7c3;
-  --color-plum: #2d1e2f;
-  --color-obsidian: #1c1618;
-  --color-muted: #6b5561;
+  /* Espacio Terapéutico — paleta serena de bienestar y salud mental */
+  --color-cream: #faf9f5;
+  --color-cream-soft: #f3efe6;
+  --color-sage: #b3c6a9;
+  --color-sage-deep: #5f7a5a;
+  --color-gold: #c9a86a;
+  --color-gold-soft: #e3d3ab;
+  --color-beige: #e4dbc9;
+  --color-ink: #3a352e;
+  --color-charcoal: #2b2a24;
+  --color-muted: #7a7267;
 }
 
 html {
@@ -36,32 +36,32 @@ body {
      scrollTo programáticos del sitio, dejándolos a mitad de camino. */
   overflow-anchor: none;
   margin: 0;
-  background-color: #faf8f5;
+  background-color: #faf9f5;
   background-image:
-    radial-gradient(circle at 12% 8%, rgba(232, 180, 184, 0.16), transparent 42%),
-    radial-gradient(circle at 88% 6%, rgba(212, 175, 55, 0.12), transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(226, 199, 195, 0.18), transparent 55%);
+    radial-gradient(circle at 12% 8%, rgba(179, 198, 169, 0.18), transparent 42%),
+    radial-gradient(circle at 88% 6%, rgba(201, 168, 106, 0.12), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(228, 219, 201, 0.22), transparent 55%);
   background-attachment: fixed;
   font-family: var(--font-sans);
-  color: #2d1e2f;
+  color: #3a352e;
 }
 
 ::selection {
-  background-color: #e8b4b8;
-  color: #2d1e2f;
+  background-color: #b3c6a9;
+  color: #3a352e;
 }
 
-/* Barra de scroll discreta acorde a la estética beauty premium */
+/* Barra de scroll discreta acorde a la estética serena y minimalista */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f4ede8;
+  background: #f3efe6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e2c7c3;
+  background: #e4dbc9;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8415b;
+  background: #5f7a5a;
 }

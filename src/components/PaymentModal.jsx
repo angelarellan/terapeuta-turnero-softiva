@@ -29,9 +29,9 @@ export default function PaymentModal({ open, amount, onClose, onConfirm }) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="mp-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-obsidian/50 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal/50 p-4 backdrop-blur-sm"
     >
-      <div className="w-full max-w-sm overflow-hidden rounded-3xl border border-nude/70 bg-cashmere shadow-2xl shadow-obsidian/30">
+      <div className="w-full max-w-sm overflow-hidden rounded-3xl border border-beige/70 bg-cream shadow-2xl shadow-charcoal/30">
         <div className="flex items-center justify-between bg-[#00aaef] px-5 py-4">
           <div className="flex items-center gap-2 text-white">
             <Wallet size={18} aria-hidden="true" />
@@ -61,7 +61,7 @@ export default function PaymentModal({ open, amount, onClose, onConfirm }) {
               <p className="text-sm text-muted">
                 Vas a pagar una seña de reserva de
               </p>
-              <p className="text-3xl font-bold text-plum">{formatPrice(amount)}</p>
+              <p className="text-3xl font-bold text-ink">{formatPrice(amount)}</p>
               <button
                 type="button"
                 onClick={handleConfirmPayment}
@@ -83,13 +83,13 @@ export default function PaymentModal({ open, amount, onClose, onConfirm }) {
                 className="animate-spin text-[#00aaef]"
                 aria-hidden="true"
               />
-              <p className="text-sm text-plum/80">Procesando pago...</p>
+              <p className="text-sm text-ink/80">Procesando pago...</p>
             </>
           )}
           {status === 'approved' && (
             <>
               <CheckCircle2 size={40} className="text-emerald-500" aria-hidden="true" />
-              <p className="text-base font-semibold text-plum">¡Pago aprobado!</p>
+              <p className="text-base font-semibold text-ink">¡Pago aprobado!</p>
               <p className="text-sm text-muted">Confirmando tu reserva...</p>
             </>
           )}

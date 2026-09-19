@@ -24,10 +24,10 @@ export default function ServiceSelector({ services, selectedId, onSelect, onConf
             aria-pressed={isSelected}
             onClick={() => onSelect(service.id)}
             onKeyDown={handleKeyDown}
-            className={`group flex w-full cursor-pointer flex-col items-start gap-3 rounded-3xl border p-4 text-left shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md transition sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] ${
+            className={`group flex w-full cursor-pointer flex-col items-start gap-3 rounded-3xl border p-4 text-left shadow-xl shadow-sage-deep/10 backdrop-blur-md transition sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] ${
               isSelected
-                ? 'border-rose-gold-deep bg-gradient-to-br from-rose-gold/20 to-champagne/15 shadow-2xl shadow-rose-gold-deep/20 ring-1 ring-rose-gold-deep/40'
-                : 'border-nude/70 bg-white/55 hover:border-rose-gold/70 hover:bg-white/75'
+                ? 'border-sage-deep bg-gradient-to-br from-sage/20 to-gold/15 shadow-2xl shadow-sage-deep/20 ring-1 ring-sage-deep/40'
+                : 'border-beige/70 bg-white/55 hover:border-sage/70 hover:bg-white/75'
             }`}
           >
             <div className="aspect-video w-full overflow-hidden rounded-2xl">
@@ -47,33 +47,33 @@ export default function ServiceSelector({ services, selectedId, onSelect, onConf
                 aria-hidden="true"
                 className={`flex h-10 w-10 items-center justify-center rounded-xl ${
                   isSelected
-                    ? 'bg-gradient-to-br from-rose-gold to-champagne text-obsidian'
-                    : 'bg-nude/50 text-rose-gold-deep'
+                    ? 'bg-gradient-to-br from-sage to-gold text-charcoal'
+                    : 'bg-beige/50 text-sage-deep'
                 }`}
               >
                 <Icon size={18} />
               </span>
-              <span className="rounded-full bg-plum/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-plum/70">
+              <span className="rounded-full bg-ink/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink/70">
                 {service.badge}
               </span>
             </div>
             <div>
-              <p className="font-serif text-base font-semibold text-plum">
+              <p className="font-serif text-base font-semibold text-ink">
                 {service.name}
               </p>
               <p className="mt-1 text-xs text-muted">{service.description}</p>
             </div>
-            <div className="mt-auto flex w-full flex-col gap-1.5 border-t border-nude/70 pt-3">
-              <span className="text-xl font-bold tracking-tight text-plum">
+            <div className="mt-auto flex w-full flex-col gap-1.5 border-t border-beige/70 pt-3">
+              <span className="text-xl font-bold tracking-tight text-ink">
                 {formatPrice(service.price)}
               </span>
               <span className="text-xs text-muted">
                 Seña:{' '}
-                <span className="font-semibold text-rose-gold-deep">
+                <span className="font-semibold text-sage-deep">
                   {formatPrice(service.deposit)}
                 </span>
               </span>
-              <span className="mt-0.5 inline-flex w-fit whitespace-nowrap rounded-full bg-nude/40 px-2.5 py-1 text-[11px] font-medium text-plum/70">
+              <span className="mt-0.5 inline-flex w-fit whitespace-nowrap rounded-full bg-beige/40 px-2.5 py-1 text-[11px] font-medium text-ink/70">
                 {formatDuration(service.duration)}
               </span>
             </div>
@@ -85,7 +85,7 @@ export default function ServiceSelector({ services, selectedId, onSelect, onConf
                   event.stopPropagation()
                   onConfirm(service.id)
                 }}
-                className="mt-1 flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2.5 text-sm font-semibold text-obsidian transition hover:brightness-105"
+                className="mt-1 flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2.5 text-sm font-semibold text-charcoal transition hover:brightness-105"
               >
                 Elegir y Continuar
                 <ArrowRight size={15} aria-hidden="true" />

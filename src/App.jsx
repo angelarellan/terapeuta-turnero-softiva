@@ -157,7 +157,7 @@ export default function App() {
   const isLoginRoute = location.pathname === '/admin/login'
 
   return (
-    <div className="flex min-h-screen flex-col bg-cashmere text-plum">
+    <div className="flex min-h-screen flex-col bg-cream text-ink">
       {!isLoginRoute && (
         <NavBar
           isAuthenticated={auth.isAuthenticated}

@@ -206,9 +206,9 @@ export default function BookingFlow({
       <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_280px]">
         <div
           id="reserva-paso-actual"
-          className="min-w-0 scroll-mt-24 rounded-3xl border border-nude/70 bg-white/60 p-5 shadow-2xl shadow-rose-gold-deep/10 backdrop-blur-md sm:p-7"
+          className="min-w-0 scroll-mt-24 rounded-3xl border border-beige/70 bg-white/60 p-5 shadow-2xl shadow-sage-deep/10 backdrop-blur-md sm:p-7"
         >
-          <h2 className="font-serif text-xl font-semibold text-plum">
+          <h2 className="font-serif text-xl font-semibold text-ink">
             {STEP_META[currentStepKey].title}
           </h2>
           <div className="mt-5">
@@ -262,7 +262,7 @@ export default function BookingFlow({
               type="button"
               onClick={handleBack}
               disabled={stepIndex === 0}
-              className="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-muted transition hover:text-plum disabled:cursor-not-allowed disabled:opacity-0"
+              className="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-muted transition hover:text-ink disabled:cursor-not-allowed disabled:opacity-0"
             >
               <ChevronLeft size={16} aria-hidden="true" />
               Volver
@@ -276,10 +276,10 @@ export default function BookingFlow({
                 canContinue
                   ? isLastStep
                     ? 'bg-[#00aaef] text-white hover:bg-[#0090c8]'
-                    : 'bg-gradient-to-r from-rose-gold to-champagne text-obsidian shadow-lg shadow-rose-gold-deep/30 hover:brightness-105'
+                    : 'bg-gradient-to-r from-sage to-gold text-charcoal shadow-lg shadow-sage-deep/30 hover:brightness-105'
                   : isLastStep
-                    ? 'cursor-pointer bg-nude/40 text-plum/70 hover:bg-nude/60'
-                    : 'cursor-not-allowed bg-nude/30 text-plum/30'
+                    ? 'cursor-pointer bg-beige/40 text-ink/70 hover:bg-beige/60'
+                    : 'cursor-not-allowed bg-beige/30 text-ink/30'
               }`}
             >
               {isLastStep ? (

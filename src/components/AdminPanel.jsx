@@ -146,7 +146,7 @@ export default function AdminPanel({
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <div className="mb-6">
-        <h1 className="font-serif text-2xl font-bold text-plum">Panel Admin</h1>
+        <h1 className="font-serif text-2xl font-bold text-ink">Panel Admin</h1>
         <p className="mt-1 text-sm text-muted">
           Buscá y gestioná los turnos, la contabilidad y el equipo del estudio.
         </p>
@@ -156,47 +156,47 @@ export default function AdminPanel({
         <button
           type="button"
           onClick={handleJumpToToday}
-          className="rounded-3xl border border-nude/70 bg-white/55 p-4 text-left shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md transition hover:border-rose-gold-deep/50 hover:bg-white/75"
+          className="rounded-3xl border border-beige/70 bg-white/55 p-4 text-left shadow-xl shadow-sage-deep/10 backdrop-blur-md transition hover:border-sage-deep/50 hover:bg-white/75"
         >
           <div className="flex items-center gap-2 text-muted">
             <CalendarDays size={15} aria-hidden="true" />
             <span className="text-xs uppercase tracking-wide">Turnos hoy</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-plum">
+          <p className="mt-2 text-2xl font-bold text-ink">
             {activeAppointments.length}
           </p>
         </button>
         <button
           type="button"
           onClick={handleJumpToProfessionals}
-          className="rounded-3xl border border-nude/70 bg-white/55 p-4 text-left shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md transition hover:border-rose-gold-deep/50 hover:bg-white/75"
+          className="rounded-3xl border border-beige/70 bg-white/55 p-4 text-left shadow-xl shadow-sage-deep/10 backdrop-blur-md transition hover:border-sage-deep/50 hover:bg-white/75"
         >
           <div className="flex items-center gap-2 text-muted">
             <Users size={15} aria-hidden="true" />
             <span className="text-xs uppercase tracking-wide">Especialistas activas</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-plum">{activeProfessionalsCount}</p>
+          <p className="mt-2 text-2xl font-bold text-ink">{activeProfessionalsCount}</p>
         </button>
-        <div className="rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md">
+        <div className="rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-xl shadow-sage-deep/10 backdrop-blur-md">
           <div className="flex items-center gap-2 text-muted">
             <Wallet size={15} aria-hidden="true" />
             <span className="text-xs uppercase tracking-wide">Ingresos estimados hoy</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-rose-gold-deep">
+          <p className="mt-2 text-2xl font-bold text-sage-deep">
             {formatPrice(totalIncome)}
           </p>
         </div>
       </div>
 
-      <div className="mb-6 flex items-center gap-1.5 rounded-full border border-nude/70 bg-white/50 p-1 sm:w-fit">
+      <div className="mb-6 flex items-center gap-1.5 rounded-full border border-beige/70 bg-white/50 p-1 sm:w-fit">
         <button
           type="button"
           onClick={() => setTab('turnos')}
           aria-pressed={tab === 'turnos'}
           className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition sm:flex-none ${
             tab === 'turnos'
-              ? 'bg-gradient-to-r from-rose-gold to-champagne text-obsidian'
-              : 'text-plum/70 hover:text-plum'
+              ? 'bg-gradient-to-r from-sage to-gold text-charcoal'
+              : 'text-ink/70 hover:text-ink'
           }`}
         >
           <CalendarClock size={15} aria-hidden="true" />
@@ -208,8 +208,8 @@ export default function AdminPanel({
           aria-pressed={tab === 'historial'}
           className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition sm:flex-none ${
             tab === 'historial'
-              ? 'bg-gradient-to-r from-rose-gold to-champagne text-obsidian'
-              : 'text-plum/70 hover:text-plum'
+              ? 'bg-gradient-to-r from-sage to-gold text-charcoal'
+              : 'text-ink/70 hover:text-ink'
           }`}
         >
           <Receipt size={15} aria-hidden="true" />
@@ -221,8 +221,8 @@ export default function AdminPanel({
           aria-pressed={tab === 'vacaciones'}
           className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition sm:flex-none ${
             tab === 'vacaciones'
-              ? 'bg-gradient-to-r from-rose-gold to-champagne text-obsidian'
-              : 'text-plum/70 hover:text-plum'
+              ? 'bg-gradient-to-r from-sage to-gold text-charcoal'
+              : 'text-ink/70 hover:text-ink'
           }`}
         >
           <CalendarOff size={15} aria-hidden="true" />
@@ -241,7 +241,7 @@ export default function AdminPanel({
                 type="date"
                 value={viewDate}
                 onChange={(event) => setViewDate(event.target.value)}
-                className="rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 text-sm text-plum focus:border-rose-gold-deep focus:outline-none"
+                className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink focus:border-sage-deep focus:outline-none"
               />
             </label>
 
@@ -249,7 +249,7 @@ export default function AdminPanel({
               <span className="text-xs font-medium uppercase tracking-wide text-muted">
                 Vista
               </span>
-              <div className="flex items-center gap-1.5 rounded-full border border-nude/70 bg-white/50 p-1">
+              <div className="flex items-center gap-1.5 rounded-full border border-beige/70 bg-white/50 p-1">
                 {AGENDA_VIEWS.map((view) => (
                   <button
                     key={view.value}
@@ -258,8 +258,8 @@ export default function AdminPanel({
                     aria-pressed={agendaView === view.value}
                     className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition sm:text-sm ${
                       agendaView === view.value
-                        ? 'bg-gradient-to-r from-rose-gold to-champagne text-obsidian'
-                        : 'text-plum/70 hover:text-plum'
+                        ? 'bg-gradient-to-r from-sage to-gold text-charcoal'
+                        : 'text-ink/70 hover:text-ink'
                     }`}
                   >
                     {view.label}
@@ -272,21 +272,21 @@ export default function AdminPanel({
               <span className="text-xs font-medium uppercase tracking-wide text-muted">
                 Buscar
               </span>
-              <div className="flex items-center gap-2 rounded-xl border border-nude bg-white/70 px-3.5 py-2.5 focus-within:border-rose-gold-deep">
+              <div className="flex items-center gap-2 rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 focus-within:border-sage-deep">
                 <Search size={15} className="flex-shrink-0 text-muted/60" aria-hidden="true" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(event) => setSearchQuery(event.target.value)}
                   placeholder="Cliente, horario, servicio o especialista..."
-                  className="w-full bg-transparent text-sm text-plum placeholder:text-muted/50 focus:outline-none"
+                  className="w-full bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
                 />
                 {searchQuery && (
                   <button
                     type="button"
                     onClick={() => setSearchQuery('')}
                     aria-label="Limpiar búsqueda"
-                    className="flex-shrink-0 text-muted transition hover:text-plum"
+                    className="flex-shrink-0 text-muted transition hover:text-ink"
                   >
                     <X size={15} aria-hidden="true" />
                   </button>
@@ -297,7 +297,7 @@ export default function AdminPanel({
               <button
                 type="button"
                 onClick={() => setViewDate(today)}
-                className="rounded-full border border-nude bg-white/60 px-4 py-2.5 text-sm font-medium text-plum/70 transition hover:border-rose-gold-deep/50 hover:text-plum"
+                className="rounded-full border border-beige bg-white/60 px-4 py-2.5 text-sm font-medium text-ink/70 transition hover:border-sage-deep/50 hover:text-ink"
               >
                 Volver a hoy
               </button>
@@ -308,7 +308,7 @@ export default function AdminPanel({
             <>
               <p className="mb-3 text-xs text-muted">
                 Mostrando turnos del{' '}
-                <span className="font-medium text-plum/70 capitalize">
+                <span className="font-medium text-ink/70 capitalize">
                   {formatDateLong(viewDate)}
                 </span>
               </p>
@@ -330,7 +330,7 @@ export default function AdminPanel({
 
           {agendaView === 'week' && (
             <div className="flex flex-col gap-6">
-              <p className="text-sm text-plum">
+              <p className="text-sm text-ink">
                 Semana del{' '}
                 <span className="font-semibold">Lunes {formatDateShort(weekBounds.from)}</span>{' '}
                 al <span className="font-semibold">Domingo {formatDateShort(weekBounds.to)}</span>
@@ -343,11 +343,11 @@ export default function AdminPanel({
                     <p className="mb-2 flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-muted">
                       {WEEKDAY_LABELS[index]} {formatDateShort(date)}
                       {isToday && (
-                        <span className="rounded-full bg-champagne/20 px-2 py-0.5 text-[10px] font-semibold text-plum">
+                        <span className="rounded-full bg-gold/20 px-2 py-0.5 text-[10px] font-semibold text-ink">
                           Hoy
                         </span>
                       )}
-                      <span className="text-plum/50">
+                      <span className="text-ink/50">
                         · {dayAppointmentsForDate.length}{' '}
                         {dayAppointmentsForDate.length === 1 ? 'turno' : 'turnos'}
                       </span>
@@ -362,7 +362,7 @@ export default function AdminPanel({
                         onUpdateNotes={onUpdateNotes}
                       />
                     ) : (
-                      <p className="rounded-2xl border border-nude/50 bg-white/40 px-4 py-3 text-sm text-muted">
+                      <p className="rounded-2xl border border-beige/50 bg-white/40 px-4 py-3 text-sm text-muted">
                         Sin turnos agendados.
                       </p>
                     )}
@@ -376,7 +376,7 @@ export default function AdminPanel({
             <>
               <p className="mb-3 text-xs text-muted">
                 Mostrando todos los turnos de{' '}
-                <span className="font-medium capitalize text-plum/70">{viewMonthLabel}</span>
+                <span className="font-medium capitalize text-ink/70">{viewMonthLabel}</span>
               </p>
               <AppointmentsTable
                 appointments={monthAppointments}

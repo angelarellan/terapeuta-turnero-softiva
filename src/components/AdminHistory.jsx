@@ -96,7 +96,7 @@ export default function AdminHistory({
   return (
     <div className="mt-8">
       <div className="mb-4">
-        <h2 className="font-serif text-lg font-semibold text-plum">
+        <h2 className="font-serif text-lg font-semibold text-ink">
           Historial & Contabilidad
         </h2>
         <p className="mt-1 text-sm text-muted">
@@ -105,31 +105,31 @@ export default function AdminHistory({
       </div>
 
       <div className="mb-6 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md">
+        <div className="rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-xl shadow-sage-deep/10 backdrop-blur-md">
           <div className="flex items-center gap-2 text-muted">
             <Wallet size={15} aria-hidden="true" />
             <span className="text-xs uppercase tracking-wide">Recaudado en señas</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-plum">{formatPrice(totalDeposited)}</p>
+          <p className="mt-2 text-2xl font-bold text-ink">{formatPrice(totalDeposited)}</p>
         </div>
-        <div className="rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md">
+        <div className="rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-xl shadow-sage-deep/10 backdrop-blur-md">
           <div className="flex items-center gap-2 text-muted">
             <Banknote size={15} aria-hidden="true" />
             <span className="text-xs uppercase tracking-wide">Pendiente a cobrar en gabinete</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-rose-gold-deep">{formatPrice(pendingAtCabinet)}</p>
+          <p className="mt-2 text-2xl font-bold text-sage-deep">{formatPrice(pendingAtCabinet)}</p>
         </div>
-        <div className="rounded-3xl border border-nude/70 bg-white/55 p-4 shadow-xl shadow-rose-gold-deep/10 backdrop-blur-md">
+        <div className="rounded-3xl border border-beige/70 bg-white/55 p-4 shadow-xl shadow-sage-deep/10 backdrop-blur-md">
           <div className="flex items-center gap-2 text-muted">
             <TrendingUp size={15} aria-hidden="true" />
             <span className="text-xs uppercase tracking-wide">Ingresos totales del mes</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-plum">{formatPrice(monthlyIncome)}</p>
+          <p className="mt-2 text-2xl font-bold text-ink">{formatPrice(monthlyIncome)}</p>
         </div>
       </div>
 
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap items-center gap-1.5 rounded-full border border-nude/70 bg-white/50 p-1">
+        <div className="flex flex-wrap items-center gap-1.5 rounded-full border border-beige/70 bg-white/50 p-1">
           {RANGE_OPTIONS.map((option) => (
             <button
               key={option.value}
@@ -138,8 +138,8 @@ export default function AdminHistory({
               aria-pressed={range === option.value}
               className={`rounded-full px-3 py-1.5 text-xs font-medium transition sm:text-sm ${
                 range === option.value
-                  ? 'bg-gradient-to-r from-rose-gold to-champagne text-obsidian'
-                  : 'text-plum/70 hover:text-plum'
+                  ? 'bg-gradient-to-r from-sage to-gold text-charcoal'
+                  : 'text-ink/70 hover:text-ink'
               }`}
             >
               {option.label}
@@ -148,12 +148,12 @@ export default function AdminHistory({
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <label className="flex items-center gap-2 rounded-full border border-nude/70 bg-white/60 px-3.5 py-2 text-xs text-plum/70">
-            <Filter size={13} className="text-rose-gold-deep" aria-hidden="true" />
+          <label className="flex items-center gap-2 rounded-full border border-beige/70 bg-white/60 px-3.5 py-2 text-xs text-ink/70">
+            <Filter size={13} className="text-sage-deep" aria-hidden="true" />
             <select
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value)}
-              className="bg-transparent text-xs font-medium text-plum focus:outline-none sm:text-sm"
+              className="bg-transparent text-xs font-medium text-ink focus:outline-none sm:text-sm"
             >
               <option value="all">Todos los estados</option>
               {Object.entries(PAYMENT_STATUSES).map(([value, info]) => (
@@ -166,7 +166,7 @@ export default function AdminHistory({
           <button
             type="button"
             onClick={handleExport}
-            className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-gold to-champagne px-4 py-2 text-xs font-semibold text-obsidian transition hover:brightness-105 sm:text-sm"
+            className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2 text-xs font-semibold text-charcoal transition hover:brightness-105 sm:text-sm"
           >
             <FileDown size={14} aria-hidden="true" />
             Exportar CSV
