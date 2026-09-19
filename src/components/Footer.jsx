@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-beige/60 bg-cream px-4 py-8 text-center sm:px-6">
       <img
-        src="/logo.jpg"
+        src="/logo.svg"
         alt=""
         aria-hidden="true"
         width={56}
@@ -22,7 +22,7 @@ export default function Footer() {
         </a>
       </p>
       <p className="mt-1 text-xs text-muted">
-        Demo de agendamiento — VR Beauty Lash © {new Date().getFullYear()}
+        Demo de agendamiento — Espacio Terapéutico © {new Date().getFullYear()}
       </p>
     </footer>
   )

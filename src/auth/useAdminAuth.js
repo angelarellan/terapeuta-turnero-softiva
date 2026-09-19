@@ -1,13 +1,13 @@
 import { useCallback, useState } from 'react'
 
-const SESSION_KEY = 'vrbl_admin_session'
+const SESSION_KEY = 'et_admin_session'
 
-// Credenciales por defecto de la dueña. Se pueden sobrescribir con
+// Credenciales por defecto de la profesional. Se pueden sobrescribir con
 // VITE_ADMIN_USER / VITE_ADMIN_PASSWORD en un archivo .env.local (Vite solo
 // expone al cliente las variables con prefijo VITE_; ADMIN_USER/ADMIN_PASSWORD
 // a secas nunca llegarían al navegador).
-const DEFAULT_ADMIN_USER = 'admin@vrbeautylash.com'
-const DEFAULT_ADMIN_PASSWORD = 'SoftivaLash2026!'
+const DEFAULT_ADMIN_USER = 'admin@espacioterapeutico.com'
+const DEFAULT_ADMIN_PASSWORD = 'EspacioTerapeutico2026!'
 
 function getAdminCredentials() {
   return {

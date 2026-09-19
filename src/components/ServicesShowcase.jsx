@@ -10,7 +10,7 @@ export default function ServicesShowcase({ services, onSelectService }) {
             Nuestros Servicios
           </h2>
           <p className="mt-2 text-base text-muted sm:text-lg">
-            Tratamiento de pestañas y cejas hechos a medida.
+            Sesiones terapéuticas pensadas para tu bienestar.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function ServicesShowcase({ services, onSelectService }) {
                   onClick={() => onSelectService(service.id)}
                   className="mt-1 flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-4 py-2.5 text-base font-semibold text-charcoal transition hover:brightness-105"
                 >
-                  Reservar este servicio
+                  Reservar esta sesión
                   <ArrowRight size={15} aria-hidden="true" />
                 </button>
               </div>

@@ -9,7 +9,7 @@ export function getBarberAvatar(id) {
       id,
       createAvatar(personas, {
         seed: id,
-        backgroundColor: ['e8b4b8', 'd4af37', 'e2c7c3'],
+        backgroundColor: ['b3c6a9', 'c9a86a', 'e4dbc9'],
       }).toDataUri(),
     )
   }

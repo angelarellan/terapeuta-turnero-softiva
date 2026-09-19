@@ -252,14 +252,14 @@ export default function AppointmentsTable({
                       <td colSpan={columnCount} className="px-4 py-3">
                         <label className="flex flex-col gap-1.5">
                           <span className="text-xs font-medium uppercase tracking-wide text-muted">
-                            Notas técnicas del tratamiento (curvatura, mm, alergias, diseño de cejas...)
+                            Notas de la sesión (motivo de consulta, seguimiento...)
                           </span>
                           <textarea
                             rows={2}
                             value={draftNotes}
                             onChange={(event) => setDraftNotes(event.target.value)}
                             className="w-full resize-none rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/50 focus:border-sage-deep focus:outline-none"
-                            placeholder="Ej: curvatura CC, 0.15mm, sin alergias conocidas."
+                            placeholder="Ej: primera sesión, seguimiento de ansiedad."
                           />
                         </label>
                         <div className="mt-2 flex justify-end gap-2">

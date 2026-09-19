@@ -24,11 +24,11 @@ export function buildOwnerNotificationMessage(booking) {
   const statusLabel = PAYMENT_STATUSES[booking.paymentStatus]?.label ?? 'Pendiente de Seña'
   const endTime = minutesToTime(timeToMinutes(booking.time) + booking.service.duration)
   return [
-    '💅 ¡Nuevo Turno Reservado!',
+    '🗓️ ¡Nuevo Turno Reservado!',
     `• Cliente: ${booking.clientName} (${booking.clientPhone})`,
-    `• Servicio: ${booking.service.name}`,
+    `• Sesión: ${booking.service.name}`,
     `• Fecha y Hora: ${formatDateLong(booking.date)} - ${booking.time} a ${endTime} hs`,
-    `• Especialista: ${booking.barber.name}`,
+    `• Profesional: ${booking.barber.name}`,
     `• Seña abonada: ${formatPrice(booking.service.deposit)}`,
     `• Estado: ${statusLabel}`,
   ].join('\n')
@@ -39,7 +39,7 @@ export function buildReminderMessage(appointment, service) {
     ? `${appointment.time} a ${minutesToTime(timeToMinutes(appointment.time) + service.duration)}`
     : appointment.time
   return [
-    `🌸 ¡Hola ${appointment.clientName.split(' ')[0]}! Te recordamos tu turno en ${STUDIO_INFO.name}.`,
+    `🌿 ¡Hola ${appointment.clientName.split(' ')[0]}! Te recordamos tu turno en ${STUDIO_INFO.name}.`,
     `• Servicio: ${service?.name ?? ''}`,
     `• Fecha y Hora: ${formatDateLong(appointment.date)} - ${timeRange} hs`,
     `• Ubicación: ${STUDIO_INFO.addressLine}`,

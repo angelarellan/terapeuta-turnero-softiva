@@ -1,9 +1,9 @@
-import { MapPin, Eye, Waves, Feather } from 'lucide-react'
+import { MapPin, User, Users, Leaf } from 'lucide-react'
 
 const BADGES = [
-  { label: 'Pestañas', icon: Eye },
-  { label: 'Cejas', icon: Feather },
-  { label: 'Lifting', icon: Waves },
+  { label: 'Individual', icon: User },
+  { label: 'Pareja', icon: Users },
+  { label: 'Holística', icon: Leaf },
 ]
 
 export default function Hero() {
@@ -11,17 +11,17 @@ export default function Hero() {
     <section id="inicio" className="scroll-mt-24 border-b border-beige/60 px-4 py-10 text-center sm:px-6 sm:py-14">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-3">
         <h1 className="font-serif text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:whitespace-nowrap">
-          VR Beauty Lash<span className="hidden sm:inline"> — </span>
+          Espacio Terapéutico<span className="hidden sm:inline"> — </span>
           <br className="sm:hidden" />
-          Cejas & Pestañas
+          Lic. Demo
         </h1>
         <p className="flex items-center gap-1.5 text-base text-muted">
           <MapPin size={17} aria-hidden="true" />
           Argüello, Córdoba, Argentina
         </p>
         <p className="max-w-xl text-lg text-ink/70 sm:text-xl">
-          Reservá tu turno online en menos de un minuto. Elegí tu tratamiento y
-          el horario que más te convenga.
+          Reservá tu turno online en menos de un minuto. Elegí tu sesión y el
+          horario que más te convenga.
         </p>
 
         <div className="mt-3 flex flex-wrap items-center justify-center gap-3">

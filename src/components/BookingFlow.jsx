@@ -14,8 +14,8 @@ import { getFirstAvailableDate } from '../data/utils'
 const BarberSelector = lazy(() => import('./BarberSelector'))
 
 const STEP_META = {
-  service: { title: '¿Qué tratamiento querés reservar?', label: 'Tratamiento' },
-  specialist: { title: '¿Con qué especialista preferís atenderte?', label: 'Especialista' },
+  service: { title: '¿Qué sesión querés reservar?', label: 'Sesión' },
+  specialist: { title: '¿Con qué profesional preferís atenderte?', label: 'Profesional' },
   datetime: { title: 'Elegí el día y horario', label: 'Fecha y hora' },
   contact: { title: 'Casi listo, dejanos tus datos', label: 'Tus datos' },
 }
@@ -60,7 +60,7 @@ export default function BookingFlow({
 
   // Si se llegó acá con un servicio preseleccionado (botón "Reservar este
   // servicio" de la vitrina), el scroll genérico a #reservar no alcanza
-  // cuando ese tratamiento queda varias filas más abajo en la grilla de 11
+  // cuando esa sesión queda varias filas más abajo en la grilla de
   // tarjetas: el usuario aterriza viendo la primera y cree que no se
   // seleccionó nada. Acá se enfoca la tarjeta elegida en cuanto se pinta,
   // una sola vez por montaje (no se repite al volver del paso 2 al 1).
@@ -78,7 +78,7 @@ export default function BookingFlow({
   }, [])
 
   // Al cambiar de paso, el contenido puede volverse mucho más bajo (p. ej.
-  // pasar de la grilla de 11 tratamientos al calendario). Si no se corrige,
+  // pasar de la grilla de 5 sesiones al calendario). Si no se corrige,
   // el scroll absoluto de la página queda apuntando a donde antes estaba el
   // paso anterior, que ahora cae sobre Políticas/Ubicación/Footer. Se
   // compara contra el último paso para el que ya se hizo scroll (en vez de
@@ -172,7 +172,7 @@ export default function BookingFlow({
 
   // Click en "Elegir y Continuar" dentro de la tarjeta ya seleccionada:
   // confirma el tratamiento y avanza directo al paso siguiente, sin obligar
-  // a bajar hasta el botón "Continuar" al pie de las 11 tarjetas.
+  // a bajar hasta el botón "Continuar" al pie de las tarjetas.
   function handleSelectAndAdvance(id) {
     setServiceId(id)
     setAttemptedSubmit(false)

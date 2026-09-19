@@ -1,165 +1,93 @@
-import { Eye, Waves, Feather, Layers, Layers2, Layers3, Wand2, Crown, Sparkles, Gem } from 'lucide-react'
+import { User, Users, ClipboardList, Leaf, Video } from 'lucide-react'
 
 export const SERVICES = [
   {
-    id: 'lifting-pestanas',
-    name: 'Lifting de Pestañas',
-    description: 'Curvatura natural desde la raíz, sin necesidad de extensiones.',
-    price: 25000,
+    id: 'terapia-individual',
+    name: 'Sesión de Terapia Individual',
+    description: 'Un espacio de escucha y acompañamiento profesional para tu bienestar emocional.',
+    price: 20000,
+    deposit: 5000,
+    duration: 60,
+    icon: User,
+    badge: 'Individual',
+    image:
+      'https://images.unsplash.com/photo-1758273240631-59d44c8f5b66?w=800&h=450&fit=crop&auto=format&q=80',
+  },
+  {
+    id: 'terapia-pareja',
+    name: 'Sesión de Terapia de Pareja',
+    description: 'Trabajamos juntos la comunicación y el vínculo para fortalecer la relación.',
+    price: 30000,
     deposit: 8000,
     duration: 60,
-    icon: Waves,
-    badge: 'Lifting',
+    icon: Users,
+    badge: 'Pareja',
     image:
-      'https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?w=800&h=450&fit=crop&auto=format&q=80',
+      'https://images.unsplash.com/photo-1542338347-4fff3276af78?w=800&h=450&fit=crop&auto=format&q=80',
   },
   {
-    id: 'lifting-pestanas-coreano',
-    name: 'Lifting de Pestañas Coreano',
-    description: 'Técnica coreana de curvatura suave y efecto más duradero.',
-    price: 40000,
-    deposit: 15000,
-    duration: 60,
-    icon: Waves,
-    badge: 'Lifting',
-    image:
-      'https://images.unsplash.com/photo-1683719312734-e31de63957ab?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'perfilado-cejas',
-    name: 'Perfilado de Cejas',
-    description: 'Diseño a medida con depilación y definición de la forma natural.',
+    id: 'consulta-evaluacion',
+    name: 'Consulta / Evaluación Inicial',
+    description: 'Primer encuentro para conocer tu motivo de consulta y diseñar el plan a seguir.',
     price: 15000,
     deposit: 5000,
-    duration: 30,
-    icon: Feather,
-    badge: 'Cejas',
-    image:
-      'https://images.unsplash.com/photo-1564278692313-b2d65996fc93?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'laminado-cejas',
-    name: 'Laminado de Cejas',
-    description: 'Cejas peinadas hacia arriba, con brillo y fijación de larga duración.',
-    price: 20000,
-    deposit: 7000,
     duration: 60,
-    icon: Layers,
-    badge: 'Cejas',
+    icon: ClipboardList,
+    badge: 'Evaluación',
     image:
-      'https://images.unsplash.com/photo-1674049406179-d7bf2c263e71?w=800&h=450&fit=crop&auto=format&q=80',
+      'https://images.unsplash.com/photo-1758273241086-f3585ef8c2f8?w=800&h=450&fit=crop&auto=format&q=80',
   },
   {
-    id: 'perfilado-laminado-cejas',
-    name: 'Perfilado + Laminado',
-    description: 'Diseño completo: perfilado y laminado de cejas en una sola sesión.',
-    price: 30000,
-    deposit: 10000,
-    duration: 60,
-    icon: Wand2,
-    badge: 'Cejas',
-    image:
-      'https://images.unsplash.com/photo-1718720410649-7524fcb0f0a5?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'combo-vip',
-    name: 'Lifting + Laminado + Perfilado (Combo VIP)',
-    description: 'El tratamiento completo: lifting de pestañas, laminado y perfilado de cejas en un solo turno.',
-    price: 50000,
-    deposit: 18000,
-    duration: 120,
-    icon: Crown,
-    badge: 'Combo VIP',
-    image:
-      'https://images.unsplash.com/photo-1709477542153-5bedab2b5657?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'pestanas-clasicas',
-    name: 'Pestañas Clásicas',
-    description: 'Una extensión por pestaña natural, para un efecto sutil y elegante.',
+    id: 'terapia-holistica-mindfulness',
+    name: 'Terapia Holística & Mindfulness',
+    description: 'Técnicas de respiración, atención plena y bienestar integral cuerpo-mente.',
     price: 25000,
-    deposit: 8000,
-    duration: 120,
-    icon: Eye,
-    badge: 'Pestañas',
+    deposit: 6000,
+    duration: 60,
+    icon: Leaf,
+    badge: 'Holística',
     image:
-      'https://images.unsplash.com/photo-1703706467603-621838cacc09?w=800&h=450&fit=crop&auto=format&q=80',
+      'https://images.unsplash.com/photo-1637245048732-adf1a547835e?w=800&h=450&fit=crop&auto=format&q=80',
   },
   {
-    id: 'pestanas-efecto-rimmel',
-    name: 'Pestañas Efecto Rimmel',
-    description: 'Volumen ligero que imita el efecto de un rímel bien aplicado.',
-    price: 28000,
-    deposit: 9000,
-    duration: 120,
-    icon: Sparkles,
-    badge: 'Pestañas',
+    id: 'sesion-online',
+    name: 'Sesión Online (Teleconsulta)',
+    description: 'La misma calidad de atención, desde la comodidad de tu hogar por videollamada.',
+    price: 18000,
+    deposit: 5000,
+    duration: 60,
+    icon: Video,
+    badge: 'Online',
     image:
-      'https://images.unsplash.com/photo-1639629509821-c54cdd984227?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'pestanas-2d',
-    name: 'Pestañas 2D Tecnológica',
-    description: 'Técnica de abanico 2D para más densidad y volumen.',
-    price: 30000,
-    deposit: 10000,
-    duration: 120,
-    icon: Layers2,
-    badge: 'Pestañas',
-    image:
-      'https://images.unsplash.com/photo-1674049406467-824ea37c7184?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'pestanas-3d4d5d',
-    name: 'Pestañas 3D 4D 5D Tecnológicas',
-    description: 'Abanicos de 3 a 5 pestañas por extensión para un volumen dramático.',
-    price: 32000,
-    deposit: 10000,
-    duration: 120,
-    icon: Layers3,
-    badge: 'Pestañas',
-    image:
-      'https://images.unsplash.com/photo-1735151226446-1d364b4adc2f?w=800&h=450&fit=crop&auto=format&q=80',
-  },
-  {
-    id: 'pestanas-6d',
-    name: 'Pestañas 6D (Mega Volumen)',
-    description: 'Máximo volumen con abanicos 6D, para un efecto glamoroso e intenso.',
-    price: 40000,
-    deposit: 15000,
-    duration: 180,
-    icon: Gem,
-    badge: 'Pestañas',
-    image:
-      'https://images.unsplash.com/photo-1567629307995-b9f33097bd30?w=800&h=450&fit=crop&auto=format&q=80',
+      'https://images.unsplash.com/photo-1758521541324-d304c5303fe5?w=800&h=450&fit=crop&auto=format&q=80',
   },
 ]
 
 export const SEED_PROFESSIONALS = [
   {
-    id: 'vicky',
-    name: 'Vicky Rife',
-    role: 'Lash Artist & Fundadora',
+    id: 'lic-demo',
+    name: 'Lic. Demo',
+    role: 'Psicóloga & Fundadora',
     status: 'active',
   },
 ]
 
-// Datos públicos del estudio, reutilizados en el header, el pie de página,
-// la sección de ubicación y las políticas de turno.
+// Datos públicos del espacio terapéutico, reutilizados en el header, el pie
+// de página, la sección de ubicación y las políticas de turno.
 export const STUDIO_INFO = {
-  name: 'VR Beauty Lash',
-  founder: 'Vicky Rife',
+  name: 'Espacio Terapéutico',
+  founder: 'Lic. Demo',
   addressLine: 'Argüello, Córdoba, Argentina',
-  instagramHandle: '@vr.beauty.lash',
-  instagramUrl: 'https://www.instagram.com/vr.beauty.lash/',
+  instagramHandle: '@espacio.terapeutico',
+  instagramUrl: 'https://www.instagram.com/espacio.terapeutico/',
   mapsUrl:
     'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('VR Beauty Lash, Argüello, Córdoba, Argentina'),
+    encodeURIComponent('Espacio Terapéutico, Argüello, Córdoba, Argentina'),
   mapsEmbedUrl:
     'https://maps.google.com/maps?q=' +
     encodeURIComponent('Argüello, Córdoba, Argentina') +
     '&z=14&output=embed',
-  // WhatsApp del estudio (dueña), en formato E.164 sin "+" ni espacios.
+  // WhatsApp del espacio terapéutico, en formato E.164 sin "+" ni espacios.
   whatsappNumber: '5493512444051',
 }
 
@@ -167,7 +95,7 @@ export const STUDIO_INFO = {
 // los que ya figuran en SEED_APPOINTMENTS). Cada uno con su propia
 // duración, para que el bloqueo de horarios sea realista.
 export const BOOKED_SLOTS = {
-  vicky: [
+  'lic-demo': [
     { time: '08:00', duration: 45 },
     { time: '19:30', duration: 30 },
   ],
@@ -198,32 +126,32 @@ export const SEED_APPOINTMENTS = [
     id: 'seed-1',
     clientName: 'Martina Gómez',
     clientPhone: '351 555 0142',
-    serviceId: 'pestanas-3d4d5d',
-    barberId: 'vicky',
+    serviceId: 'terapia-individual',
+    barberId: 'lic-demo',
     date: new Date().toISOString().slice(0, 10),
     time: '10:00',
     reminderSent: false,
     paymentStatus: 'senado_mp',
-    notes: 'Curvatura CC, 0.15mm. Sin alergias conocidas.',
+    notes: 'Primera sesión de seguimiento. Sin observaciones previas.',
   },
   {
     id: 'seed-2',
     clientName: 'Facundo Ríos',
     clientPhone: '351 555 0198',
-    serviceId: 'perfilado-cejas',
-    barberId: 'vicky',
+    serviceId: 'consulta-evaluacion',
+    barberId: 'lic-demo',
     date: new Date().toISOString().slice(0, 10),
     time: '16:30',
     reminderSent: true,
     paymentStatus: 'pagado_completo',
-    notes: 'Diseño recto, tinte castaño oscuro.',
+    notes: 'Evaluación inicial, deriva de consulta general.',
   },
   {
     id: 'seed-3',
     clientName: 'Bruna Aguirre',
     clientPhone: '351 555 0163',
-    serviceId: 'lifting-pestanas',
-    barberId: 'vicky',
+    serviceId: 'terapia-holistica-mindfulness',
+    barberId: 'lic-demo',
     date: new Date().toISOString().slice(0, 10),
     time: '17:00',
     reminderSent: false,

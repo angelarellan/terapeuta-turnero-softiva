@@ -99,7 +99,7 @@ export default function ContactForm({
 
       <label className="flex flex-col gap-1.5">
         <span className="text-xs font-medium uppercase tracking-wide text-muted">
-          Notas técnicas (opcional)
+          Motivo de consulta (opcional)
         </span>
         <div className="flex items-start gap-2 rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 transition focus-within:border-sage-deep">
           <NotebookPen size={16} className="mt-0.5 flex-shrink-0 text-muted/60" aria-hidden="true" />
@@ -107,7 +107,7 @@ export default function ContactForm({
             rows={2}
             value={notes}
             onChange={(event) => onChangeNotes(event.target.value)}
-            placeholder="Ej: curvatura CC 0.15mm, alergias, diseño de cejas deseado..."
+            placeholder="Ej: ansiedad, terapia de pareja, primera consulta..."
             className="w-full resize-none bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
           />
         </div>

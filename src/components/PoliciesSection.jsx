@@ -3,8 +3,8 @@ import {
   CreditCard,
   Ban,
   ShieldCheck,
-  Sparkles,
   Clock,
+  Lock,
   MessageCircleWarning,
 } from 'lucide-react'
 import { STUDIO_INFO } from '../data/mockData'
@@ -18,27 +18,27 @@ const POLICIES = [
   {
     icon: CalendarCheck,
     title: 'Reserva y seña',
-    text: 'Cada turno se reserva abonando la seña correspondiente al tratamiento elegido (indicada en cada servicio). Debe abonarse dentro de las 24 hs de reservado. La seña no es reembolsable; el resto se abona en efectivo el día del turno.',
+    text: 'Cada turno se reserva abonando la seña correspondiente a la sesión elegida (indicada en cada servicio). Debe abonarse dentro de las 24 hs de reservado. La seña no es reembolsable; el resto se abona en efectivo el día de la sesión.',
   },
   {
     icon: Ban,
     title: 'Cancelación y reprogramación',
-    text: 'El turno puede reprogramarse sin perder la seña solo si avisás con más de 48 hs de anticipación (sujeto a disponibilidad). Fuera de ese plazo la seña se pierde y deberá abonarse una nueva para reservar otro turno.',
+    text: 'La sesión puede reprogramarse sin perder la seña solo si avisás con más de 48 hs de anticipación (sujeto a disponibilidad). Fuera de ese plazo la seña se pierde y deberá abonarse una nueva para reservar otro turno.',
+  },
+  {
+    icon: Lock,
+    title: 'Confidencialidad',
+    text: 'Todo lo compartido durante la sesión es estrictamente confidencial, en el marco del secreto profesional.',
   },
   {
     icon: ShieldCheck,
-    title: 'Garantía',
-    text: 'El tratamiento cuenta con garantía durante las 72 hs posteriores a la colocación. Si asistís al turno con maquillaje, la garantía se pierde.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Adicionales',
-    text: 'Si asistís con maquillaje o extensiones de pestañas sucias, se retira y se cobra un adicional de remoción y limpieza.',
+    title: 'Modalidad',
+    text: 'Las sesiones son presenciales u online (teleconsulta), según el servicio elegido. La sesión online se realiza por videollamada desde un enlace que se envía antes del turno.',
   },
   {
     icon: Clock,
     title: 'Horario de llegada',
-    text: 'La tolerancia máxima es de 10 minutos. Pasado ese tiempo se cobra un adicional por demora. No se aceptan acompañantes ni niños en el estudio.',
+    text: 'La tolerancia máxima es de 10 minutos. Pasado ese tiempo se descuenta del tiempo total de la sesión.',
   },
   {
     icon: MessageCircleWarning,

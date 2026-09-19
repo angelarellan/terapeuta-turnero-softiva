@@ -29,7 +29,7 @@ export default function AdminLogin({ isAuthenticated, onLogin }) {
       <div className="w-full max-w-sm rounded-3xl border border-beige/70 bg-white/60 p-8 shadow-2xl shadow-sage-deep/10 backdrop-blur-md">
         <div className="flex flex-col items-center gap-2 text-center">
           <img
-            src="/logo.jpg"
+            src="/logo.svg"
             alt=""
             aria-hidden="true"
             width={56}
@@ -37,7 +37,7 @@ export default function AdminLogin({ isAuthenticated, onLogin }) {
             className="h-14 w-14 rounded-full object-cover shadow-sm shadow-sage-deep/20"
           />
           <h1 className="font-serif text-2xl font-bold text-ink">Panel Admin</h1>
-          <p className="text-sm text-muted">VR Beauty Lash — acceso privado</p>
+          <p className="text-sm text-muted">Espacio Terapéutico — acceso privado</p>
         </div>
 
         <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
@@ -56,7 +56,7 @@ export default function AdminLogin({ isAuthenticated, onLogin }) {
                   setUser(event.target.value)
                   setError(false)
                 }}
-                placeholder="admin@vrbeautylash.com"
+                placeholder="admin@espacioterapeutico.com"
                 className="w-full bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
               />
             </div>

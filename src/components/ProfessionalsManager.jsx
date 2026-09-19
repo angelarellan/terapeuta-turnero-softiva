@@ -107,7 +107,7 @@ export default function ProfessionalsManager({
                 required
                 value={role}
                 onChange={(event) => setRole(event.target.value)}
-                placeholder="Ej: Microblading"
+                placeholder="Ej: Psicología Clínica"
                 className="rounded-xl border border-beige bg-white/70 px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/50 focus:border-sage-deep focus:outline-none"
               />
             </label>

@@ -148,7 +148,7 @@ export default function AdminPanel({
       <div className="mb-6">
         <h1 className="font-serif text-2xl font-bold text-ink">Panel Admin</h1>
         <p className="mt-1 text-sm text-muted">
-          Buscá y gestioná los turnos, la contabilidad y el equipo del estudio.
+          Buscá y gestioná los turnos, la contabilidad y el equipo del espacio.
         </p>
       </div>
 

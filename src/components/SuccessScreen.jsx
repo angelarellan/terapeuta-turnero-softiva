@@ -6,6 +6,7 @@ import { STUDIO_INFO } from '../data/mockData'
 
 export default function SuccessScreen({ booking, onReset }) {
   const { service, barber, date, time, clientName } = booking
+  const founderFirstName = STUDIO_INFO.founder.split(' ').pop()
 
   const ownerWhatsAppUrl = buildWhatsAppUrl(
     STUDIO_INFO.whatsappNumber,
@@ -26,7 +27,7 @@ export default function SuccessScreen({ booking, onReset }) {
         </h2>
         <p className="mt-2 text-sm text-muted">
           Tu seña fue acreditada con Mercado Pago. Un último paso para avisarle
-          a Vicky.
+          a {founderFirstName}.
         </p>
       </div>
 
@@ -38,7 +39,7 @@ export default function SuccessScreen({ booking, onReset }) {
           </span>
         </div>
         <div className="flex justify-between border-b border-beige/70 py-2.5">
-          <span className="text-muted">Especialista</span>
+          <span className="text-muted">Profesional</span>
           <span className="font-medium text-ink">{barber.name}</span>
         </div>
         <div className="flex justify-between border-b border-beige/70 py-2.5">
@@ -69,11 +70,11 @@ export default function SuccessScreen({ booking, onReset }) {
           className="flex w-full max-w-xs items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-sage to-gold px-5 py-2.5 text-sm font-semibold text-charcoal shadow-md shadow-sage-deep/20 transition hover:brightness-105"
         >
           <MessageCircle size={16} aria-hidden="true" />
-          Enviar comprobante y notificar a Vicky
+          Enviar comprobante y notificar a {founderFirstName}
         </a>
         <p className="text-xs text-emerald-700">
-          Presioná el botón para enviar tu confirmación directamente al chat de
-          Vicky.
+          Presioná el botón para enviar tu confirmación directamente al chat de{' '}
+          {founderFirstName}.
         </p>
       </div>
 

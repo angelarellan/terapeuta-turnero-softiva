@@ -29,9 +29,9 @@ export default function App() {
   // dueña abre el Panel Admin desde otro dispositivo distinto al de la
   // clienta, no va a ver ese turno ahí. Sincronizar entre dispositivos de
   // verdad requiere un backend, que este sitio (100% estático) no tiene.
-  const [appointments, setAppointments] = useLocalStorageState('vrbl_appointments', SEED_APPOINTMENTS)
-  const [professionals, setProfessionals] = useLocalStorageState('vrbl_professionals', SEED_PROFESSIONALS)
-  const [blockedDates, setBlockedDates] = useLocalStorageState('vrbl_blocked_dates', [])
+  const [appointments, setAppointments] = useLocalStorageState('et_appointments', SEED_APPOINTMENTS)
+  const [professionals, setProfessionals] = useLocalStorageState('et_professionals', SEED_PROFESSIONALS)
+  const [blockedDates, setBlockedDates] = useLocalStorageState('et_blocked_dates', [])
   const [confirmedBooking, setConfirmedBooking] = useState(null)
   const [bookingResetKey, setBookingResetKey] = useState(0)
   const [preselectedServiceId, setPreselectedServiceId] = useState(null)
