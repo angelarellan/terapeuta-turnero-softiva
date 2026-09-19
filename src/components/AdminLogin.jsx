@@ -56,7 +56,7 @@ export default function AdminLogin({ isAuthenticated, onLogin }) {
                   setUser(event.target.value)
                   setError(false)
                 }}
-                placeholder="admin@espacioterapeutico.com"
+                placeholder="admin"
                 className="w-full bg-transparent text-sm text-ink placeholder:text-muted/50 focus:outline-none"
               />
             </div>

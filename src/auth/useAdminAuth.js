@@ -9,6 +9,11 @@ const SESSION_KEY = 'et_admin_session'
 const DEFAULT_ADMIN_USER = 'admin@espacioterapeutico.com'
 const DEFAULT_ADMIN_PASSWORD = 'EspacioTerapeutico2026!'
 
+// Fallback fijo para la demo: entra siempre con admin/admin, sin depender
+// de que Vercel tenga configuradas VITE_ADMIN_USER / VITE_ADMIN_PASSWORD.
+const DEMO_ADMIN_USER = 'admin'
+const DEMO_ADMIN_PASSWORD = 'admin'
+
 function getAdminCredentials() {
   return {
     user: import.meta.env.VITE_ADMIN_USER || DEFAULT_ADMIN_USER,
@@ -34,9 +39,12 @@ export default function useAdminAuth() {
 
   const login = useCallback((user, password) => {
     const credentials = getAdminCredentials()
-    const ok =
-      user.trim().toLowerCase() === credentials.user.toLowerCase() &&
-      password === credentials.password
+    const trimmedUser = user.trim().toLowerCase()
+    const matchesConfigured =
+      trimmedUser === credentials.user.toLowerCase() && password === credentials.password
+    const matchesDemoFallback =
+      trimmedUser === DEMO_ADMIN_USER && password === DEMO_ADMIN_PASSWORD
+    const ok = matchesConfigured || matchesDemoFallback
     if (ok) {
       try {
         localStorage.setItem(SESSION_KEY, 'true')
