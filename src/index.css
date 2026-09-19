@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans Variable", system-ui, "Segoe UI", Roboto,
+    sans-serif;
+  --font-serif: "Playfair Display", "Plus Jakarta Sans Variable", system-ui,
+    serif;
+
+  /* Beauty Premium 3D — paleta cálida de estudio de belleza */
+  --color-cashmere: #faf8f5;
+  --color-cashmere-soft: #f4ede8;
+  --color-rose-gold: #e8b4b8;
+  --color-rose-gold-deep: #a8415b;
+  --color-champagne: #d4af37;
+  --color-champagne-soft: #e9cf7d;
+  --color-nude: #e2c7c3;
+  --color-plum: #2d1e2f;
+  --color-obsidian: #1c1618;
+  --color-muted: #6b5561;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  /* Sin esto, el "scroll anchoring" del navegador reajusta solo el
+     scroll cuando cambia el alto de la página (imágenes lazy, remounts,
+     fuentes cargando), y eso le gana la carrera a los scrollIntoView /
+     scrollTo programáticos del sitio, dejándolos a mitad de camino. */
+  overflow-anchor: none;
+  margin: 0;
+  background-color: #faf8f5;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(232, 180, 184, 0.16), transparent 42%),
+    radial-gradient(circle at 88% 6%, rgba(212, 175, 55, 0.12), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(226, 199, 195, 0.18), transparent 55%);
+  background-attachment: fixed;
+  font-family: var(--font-sans);
+  color: #2d1e2f;
+}
+
+::selection {
+  background-color: #e8b4b8;
+  color: #2d1e2f;
+}
+
+/* Barra de scroll discreta acorde a la estética beauty premium */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ede8;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2c7c3;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8415b;
+}
